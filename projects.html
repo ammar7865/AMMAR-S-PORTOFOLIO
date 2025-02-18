@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>My Projects</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <header class="hero">
+        <h1>My Projects</h1>
+    </header>
+
+    <section class="projects">
+        <h2>Recent Projects</h2>
+        <div id="projectList"></div>
+    </section>
+
+    <script>
+        // Array of project details
+        const projects = [
+            { name: "Amazon Clone", link: "https://your-amazon-clone-link.com" },
+            { name: "Portfolio Website", link: "https://your-portfolio-link.com" },
+            // Add more projects here
+        ];
+
+        // Get the project container
+        const projectContainer = document.getElementById("projectList");
+
+        // Generate project list dynamically
+        projects.forEach(project => {
+            let projectItem = document.createElement("div");
+            projectItem.innerHTML = `<a href="${project.link}" target="_blank">${project.name}</a>`;
+            projectContainer.appendChild(projectItem);
+        });
+    </script>
+</body>
+</html>
